@@ -20,7 +20,7 @@ exports.search = function(req, res){
 		flickr : function(callback){
 			// https://www.flickr.com/services/api/misc.urls.html
 			var ENDPOINT = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&per_page=50&page=1&extras=url_n'
-			ENDPOINT += '&api_key=' + keys.flickr.clientID
+			ENDPOINT += '&api_key=' +  process.env.FLICKR_CID //keys.flickr.clientID
 			ENDPOINT += '&text=' + query
 
 			request(ENDPOINT, function(err, response, body){
@@ -48,7 +48,7 @@ exports.search = function(req, res){
 			var options = {
 				url : ENDPOINT,
 				headers: {
-					'Authorization' : 'Client-ID ' + keys.imgur.clientID
+					'Authorization' : 'Client-ID ' +  process.env.IMGUR_CID
 				}
 			}
 

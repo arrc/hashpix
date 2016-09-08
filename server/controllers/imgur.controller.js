@@ -5,7 +5,7 @@ keys = require('../config/keys')
 
 
 
-/* ========================================================== 
+/* ==========================================================
 	FETCHTOP
 ============================================================ */
 exports.fetchTop = function(req, res){
@@ -13,7 +13,7 @@ exports.fetchTop = function(req, res){
 	let options = {
 		url : ENDPOINT,
 		headers: {
-			'Authorization' : 'Client-ID ' + keys.imgur.clientID
+			'Authorization' : 'Client-ID ' + process.env.IMGUR_CID //keys.imgur.clientID
 		}
 	}
 	request(options, function(err, response, body){
@@ -24,7 +24,7 @@ exports.fetchTop = function(req, res){
 	})
 }
 
-/* ========================================================== 
+/* ==========================================================
 	PRESSED
 ============================================================ */
 exports.pressed = function(req, res){
