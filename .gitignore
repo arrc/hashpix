@@ -1,0 +1,8 @@
+*.log
+npm-debug.log*
+node_modules
+public/lib
+.npm
+.node_repl_history
+.env
+server/config/keys.js

@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HashPix</title>
+    <link rel="stylesheet" href="lib/foundation-sites/dist/foundation.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="app/style/app.css">
+    <script src="lib/foundation/js/vendor/modernizr.js"></script>
+  </head>
+
+<body ng-app="hashPix">
+
+	{% block content %}{% endblock %}
+
+<!--Application JavaScript Files-->
+	<script src="lib/foundation/js/vendor/jquery.js"></script>
+	<script src="lib/foundation-sites/dist/foundation.js"></script>
+	<script>
+	  $(document).foundation();
+	</script>
+	<script src="lib/jquery-bridget/jquery.bridget.js"></script>
+	<script src="lib/get-style-property/get-style-property.js"></script>
+	<script src="lib/get-size/get-size.js"></script>
+	<script src="lib/eventEmitter/EventEmitter.js"></script>
+	<script src="lib/eventie/eventie.js"></script>
+	<script src="lib/doc-ready/doc-ready.js"></script>
+	<script src="lib/matches-selector/matches-selector.js"></script>
+	<script src="lib/fizzy-ui-utils/utils.js"></script>
+	<script src="lib/outlayer/item.js"></script>
+	<script src="lib/outlayer/outlayer.js"></script>
+	<script src="lib/masonry/masonry.js"></script>
+	<script src="lib/imagesloaded/imagesloaded.js"></script>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular-images-loaded/angular-images-loaded.js"></script>
+	<script src="lib/angular-masonry/angular-masonry.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="lib/angular-foundation/mm-foundation-tpls.js"></script>
+	<script src="lib/angular-deckgrid/angular-deckgrid.js"></script>
+	<script src="app/app.js"></script>
+	{% for script in scripts %}
+	<script src="{{ script }}"></script>
+	{% endfor %}
+</body>
+
+</html>
