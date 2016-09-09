@@ -31,9 +31,13 @@ exports.search = function(req, res){
 				}
 			})
 		},
+		// NOTE: Instagram changed their api policy & revoked public access to their
+		// search endpoint. One has to be signed-in in order to search images.
+
 		// instagram : function(callback){
 		// 	var ENDPOINT = 'https://api.instagram.com/v1/tags/'+ query +'/media/recent?'
-		// 	ENDPOINT += '&client_id=' + keys.instagram.clientID + '&count=33'
+		// 	ENDPOINT += '&client_id=' + process.env.INSTAGRAM_CID + '&count=33'
+		// 	console.log(ENDPOINT);
 		//
 		// 	request(ENDPOINT, function(err, response, body){
 		// 		if (!err && response.statusCode == 200){
