@@ -6,17 +6,17 @@ module.exports = function(app){
 	let flickrAPI = require('./controllers/flickr.controller.js');
 	let searchAPI = require('./controllers/search.controller.js');
 
-	// 'CORE' ----------------------------  
+	// 'CORE' ----------------------------
 	app.route('/').get(core.index);
-	app.route('/api/test').get(core.test);
+	// app.route('/api/test').get(core.test);
 
-	// 'IMGUR' ----------------------------  
-	app.route('/api/imgur/top').get(imgurAPI.fetchTop)
-	app.route('/api/pressed').get(imgurAPI.pressed)
+	// 'IMGUR' ----------------------------
+	// app.route('/api/imgur/top').get(imgurAPI.fetchTop)
+	// app.route('/api/pressed').get(imgurAPI.pressed)
 
-	// 'FLICKR' ----------------------------  
-	app.route('/api/flickr/search').get(flickrAPI.search)
+	// 'FLICKR' ----------------------------
+	// app.route('/api/flickr/search').get(flickrAPI.search)
 
-	// 'SEARCH' ----------------------------  
+	// 'SEARCH' ----------------------------
 	app.route('/api/search').get(searchAPI.search)
 }
