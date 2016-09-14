@@ -18,6 +18,8 @@
 	</section>
 	<section class="row hp_results_wrapper">
 		<div class="large-9 large-centered columns">
+			<div ng-if="vm.results.length === 0 && !vm.loading" class="hp_empty_results text-center"><em>No serach result.</em></div>
+			<div ng-if="vm.loading" class="hp_loader text-center"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div>
 			<div deckgrid source="vm.results" cardTemplate="app/core/views/deckgrid-card.view.html" class="deckgrid"></div>
 			<section>
 				<button type="button" class="button hollow expanded" ng-if="vm.results.length > 0" ng-click="vm.loadMore()">Load more</button>

@@ -86,6 +86,18 @@ body, a {
 	min-height: calc(50vh - 70px);
 }
 
+.hp_result_container {
+	border: thin solid lightgray;
+	padding: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+	transition: box-shadow 200ms ease-out;
+}
+
+.hp_result_container:hover {
+	box-shadow: 0 0 6px 1px rgba(182,121,203,0.6);
+}
+
 footer {
 	color: gray;
 	height: 100px;

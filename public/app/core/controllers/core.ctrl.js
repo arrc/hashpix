@@ -6,12 +6,14 @@
 		_this.fullSearchResults;
 		_this.results = [];
 		_this.counter = 0;
-		_this.test = 'This is hte'
+		_this.loading = false;
 
-		// 'get serach' ----------------------------  
+		// 'get serach' ----------------------------
 		_this.getSearch = function(){
 			console.log(_this.searchTerm)
+			_this.loading = true;
 			Search.getSearch(_this.searchTerm).then(function(data){
+				_this.loading = false;
 				_this.fullSearchResults = data;
 				_this.results = _this.fullSearchResults[0];
 			}, function(error){
@@ -19,7 +21,7 @@
 			})
 		}
 
-		// 'load more' ----------------------------  
+		// 'load more' ----------------------------
 		_this.loadMore = function(){
 			_this.counter += 1;
 			var nextResultSet = _this.fullSearchResults[_this.counter];
@@ -29,7 +31,7 @@
 		}
 	};
 
-	/* ========================================================== 
+	/* ==========================================================
 		setup
 	============================================================ */
 	angular.module('hashPix').controller('CoreController',[

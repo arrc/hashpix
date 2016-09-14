@@ -1,6 +1,6 @@
-<div>
+<section class="hp_result_container">
 	<div>
-		<img ng-src=" {{ card.url }} " alt="{{ card.source }}">
+		<a href="{{ card.url }}"><img ng-src=" {{ card.url }} " alt="{{ card.source }}"></a>
 	</div>
-	<div><a href="{{ card.link }}">{{ card.source }}</a></div>
-</div>
+	<div><a href="{{ card.url }}">{{ card.source }}</a></div>
+</section>
