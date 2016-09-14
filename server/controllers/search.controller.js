@@ -2,7 +2,7 @@
 
 let request = require('request'),
 async = require('async'),
-keys = require('../config/keys'),
+// keys = require('../config/keys'),
 _ = require('lodash');
 
 
