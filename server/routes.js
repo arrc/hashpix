@@ -2,8 +2,8 @@
 
 module.exports = function(app){
 	var core = require('./controllers/core.controller.js');
-	let imgurAPI = require('./controllers/imgur.controller.js');
-	let flickrAPI = require('./controllers/flickr.controller.js');
+	// let imgurAPI = require('./controllers/imgur.controller.js');
+	// let flickrAPI = require('./controllers/flickr.controller.js');
 	let searchAPI = require('./controllers/search.controller.js');
 
 	// 'CORE' ----------------------------
