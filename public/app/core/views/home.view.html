@@ -1,18 +1,22 @@
-<div class="row">
-	<div class="large-9 large-centered columns">
-		
+<header class="row">
+	<div class="large-9 large-centered columns hp_header">
+		<a href="/"><section class="hp_site_logo"><img class="hp_logo_image" src="/images/logo.png" alt=""></section></a>
+		<div class="hp_site_heading_wrapper">
+			<section class="hp_site_heading">A new-age image search.</section>
+			<section class="hp_site_sub_heading">search images on <span class="hp_i_instagram">instagram</span>, imgur &amp; flickr</section>
+		</div>
 	</div>
-</div>
+</header>
 
 <div ng-controller="CoreController as vm">
 	<section class="row">
-		<div class="large-8 large-centered columns">
+		<div class="large-9 large-centered columns">
 			<form ng-submit="vm.getSearch()">
-				<input type="text" ng-model="vm.searchTerm">
+				<input class="hp_search_field" type="text" ng-model="vm.searchTerm" placeholder="search term eg: puppy">
 			</form>
 		</div>
 	</section>
-	<section class="row">
+	<section class="row hp_results_wrapper">
 		<div class="large-9 large-centered columns">
 			<div deckgrid source="vm.results" cardTemplate="app/core/views/deckgrid-card.view.html" class="deckgrid"></div>
 			<section>
@@ -22,8 +26,10 @@
 	</section>
 </div>
 
-<div class="row footer">
+<footer class="row">
 	<div class="large-9 large-centered columns">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt veniam nam voluptate voluptates error excepturi vitae numquam perspiciatis, consequuntur architecto veritatis, quisquam ex nostrum quae autem nemo mollitia, quod, voluptas!</p>
+		<hr>
+		<p class="text-center">a divine creation of <a href="http://arrc.in">arrC</a>.</p>
+		<p class="text-center">Built using Angular.js, Foundation 6, Blogger sans, Font-awesome, Sketch and awesome third party api's.</p>
 	</div>
-</div>
+</footer>

@@ -21,7 +21,7 @@
 @font-face {
 	font-family: 'bloggerSansItalic';
 	src: url("./blogger-sans/Blogger_Sans-Italic.otf");
-} 
+}
 
 .deckgrid[deckgrid]::before {
     /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
@@ -38,6 +38,59 @@
     width: 33%;
 }
 
-body {
+body, a {
 	font-family: "bloggerSans", serif;
+	color: #b679cb;
+}
+
+.hp_header {
+	display: flex;
+	align-items: center;
+	height: 200px;
+}
+
+.hp_site_logo {
+	/*background: url(http://localhost:3000/images/logo.png) no-repeat;*/
+	width: 40%;
+	height: 150px;
+	margin-right: 50px;
+}
+
+.hp_logo_image {
+	min-width: 271px;
+	height: 147px;
+}
+
+.hp_site_heading_wrapper {
+	color: #b679cb;
+}
+
+.hp_site_heading {
+	font-size: 2em;
+}
+
+.hp_site_sub_heading {
+	font-size: 1.2em;
+}
+
+.hp_site_sub_heading > .hp_i_instagram {
+	text-decoration: line-through;
+}
+
+.hp_search_field {
+	border: 2px solid lightgray;
+	border-radius: 3px;
+}
+
+.hp_results_wrapper {
+	min-height: calc(50vh - 70px);
+}
+
+footer {
+	color: gray;
+	height: 100px;
+}
+
+footer p:last-child {
+	font-size: 0.7em;
 }

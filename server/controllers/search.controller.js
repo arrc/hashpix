@@ -5,9 +5,6 @@ async = require('async'),
 keys = require('../config/keys'),
 _ = require('lodash');
 
-/* TODO ***************************************************
-
-*********************************************************** */
 
 /* ==========================================================
 	search function
@@ -22,7 +19,7 @@ exports.search = function(req, res){
 			var ENDPOINT = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&per_page=50&page=1&extras=url_n'
 			ENDPOINT += '&api_key=' +  process.env.FLICKR_CID //keys.flickr.clientID
 			ENDPOINT += '&text=' + query
-
+			console.log(ENDPOINT);
 			request(ENDPOINT, function(err, response, body){
 				if (!err && response.statusCode == 200){
 					var info = JSON.parse(body)
