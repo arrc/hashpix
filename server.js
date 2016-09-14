@@ -65,7 +65,7 @@ require('./server/routes.js')(app);
 /* ==========================================================
 	APP
 ============================================================ */
-var server = app.listen(3000, function () {
+var server = app.listen(3030, function () {
   let host = server.address().address;
   let port = server.address().port;
 
