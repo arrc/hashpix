@@ -11,10 +11,6 @@
 				url: '/',
 				templateUrl: 'app/core/views/home.view.html'
 			})
-			.state('test', {
-				url: '/test',
-				templateUrl: 'app/core/views/test.view.html'
-			})
 	}]);
 
 })();
