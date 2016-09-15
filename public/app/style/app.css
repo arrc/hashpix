@@ -39,6 +39,7 @@
 }
 
 body, a {
+	background-image: url("/images/furley_bg.png");
 	font-family: "bloggerSans", serif;
 	color: #b679cb;
 }
