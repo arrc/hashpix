@@ -22,6 +22,7 @@ _              = require('lodash');
 /* ==========================================================
 	SETUP
 ============================================================ */
+app.use(express.static(__dirname + '/public'));
 app.set('showStackError', true);
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
@@ -30,7 +31,6 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.engine("server.html", consolidate.swig);
 app.set("view engine", "server.html");
 app.set('views', __dirname + '/server/views');
-app.use(express.static(__dirname + '/public'));
 
 /* ==========================================================
 	ROUTES
